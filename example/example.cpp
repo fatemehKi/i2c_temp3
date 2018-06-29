@@ -56,7 +56,7 @@ int main() {
             if (distance < 0) {
                 int llError ;
                 llError = adafruitMCP9808->getError() ;
-                printf("Lidar-Lite error: %d\n",llError) ;
+                printf("Adafruit MCP9808 error: %d\n",llError) ;
         }
     }
     adafruitMCP9808->closeAdafruitMCP9808();
