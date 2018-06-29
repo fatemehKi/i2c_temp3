@@ -23,11 +23,17 @@ bool AdafruitMCP9808::openAdafruitMCP9808()
     if (kI2CFileDescriptor < 0) {
         // Could not open the file
         error = errno ;
+        printf("Error: %d",  error);
+        printf("Can not open the file");
+
         return false ;
     }
     if (ioctl(kI2CFileDescriptor, I2C_SLAVE, kAdafruitMCP9808I2CAddress) < 0) {
         // Could not open the device on the bus
         error = errno ;
+        
+        printf("Error: %d",  error);
+        printf("Can not open the device on the bus");
         return false ;
     }
     return true ;
