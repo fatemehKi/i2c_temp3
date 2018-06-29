@@ -60,6 +60,7 @@ int AdafruitMCP9808::readAdafruitMCP9808(int readRegister)
     return toReturn ;
 }
 
+/*
 // Write the the given value to the given register on the Lidar-Lite
 int AdafruitMCP9808::writeAdafruitMCP9808(int writeRegister, int writeValue)
 {
@@ -72,7 +73,7 @@ int AdafruitMCP9808::writeAdafruitMCP9808(int writeRegister, int writeValue)
     }
     return toReturn ;
 
-}
+}*/
 
 // Return the current calculated distance in centimeters
 int AdafruitMCP9808::getTemp()
