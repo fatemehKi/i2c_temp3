@@ -45,15 +45,15 @@
 #define kAdafruitMCP9808I2CAddress                    0x1b
 
 // Internal Control Registers
-#define kAdafruitMCP9808CommandControlRegister        0x00    // Command Control Register
+#define kAdafruitMCP9808CommandControlRegister        0x01    // Command Control Register
 
 // High byte set means read two bytes
-#define kAdafruitMCP9808TempMSB          0x8f    // Calculated distance in cm (difference between signal and reference delay)
+#define kAdafruitMCP9808TempMSB          0x02    // Calculated distance in cm (difference between signal and reference delay)
                                                         // High byte of calculated delay of signal [Read Only]: reference – calculated after correlation record processing
                                                         // If the returned MSB is 1 then the reading is not considered valid.
 
-#define kAdafruitMCP9808TempLSB          0x10    // Low byte of calculated delay of signal [Read Only]: reference – calculated after correlation record processing
-
+#define kAdafruitMCP9808TempLSB          0x03    // Low byte of calculated delay of signal [Read Only]: reference – calculated after correlation record processing
+#define MCP9808_REG_AMBIENT_TEMP         0x05
 // External Control Registers
 //#define kAdafruitMCP9808HardwareVersion               0x41    // Hardware Version: revisions begin with 0x01
 //#define kAdafruitMCP9808SoftwareVersion               0x4f    // Software Version: Revisions begin with 0x01
