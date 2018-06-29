@@ -71,7 +71,7 @@ public:
     ~AdafruitMCP9808() ;
     bool openAdafruitMCP9808() ;                   // Open the I2C bus to the AdafruitMCP9808
     void closeAdafruitMCP9808();                   // Close the I2C bus to the AdafruitMCP9808
-    int writeAdafruitMCP9808(int writeRegister,int writeValue) ;
+   // int writeAdafruitMCP9808(int writeRegister,int writeValue) ;
     int readAdafruitMCP9808(int readRegister) ;
     int getTemp() ;
 
