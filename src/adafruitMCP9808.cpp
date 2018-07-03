@@ -102,22 +102,23 @@ float AdafruitMCP9808::getTemp()
     if (ioResult < 0) {
         return ioResult ;
     }
-    ioResult = readAdafruitMCP9808(kAdafruitMCP9808TempMSB);
+    ioResult = readAdafruitMCP9808(MCP9808_REG_AMBIENT_TEMP);
     if (ioResult < 0) {
         return ioResult ;
     } else {
         msb = ioResult ;
            printf("MSB: %d\n",msb) ;
     }
-    ioResult = readAdafruitMCP9808(kAdafruitMCP9808TempLSB);
-    if (ioResult < 0) {
-        return ioResult ;
-    } else {
-        lsb = ioResult ;
-        printf("LSB: %d\n",lsb) ;
-    }
+   // ioResult = readAdafruitMCP9808(kAdafruitMCP9808TempLSB);
+   // if (ioResult < 0) {
+      //  return ioResult ;
+   // } else {
+     //   lsb = ioResult ;
+     //   printf("LSB: %d\n",lsb) ;
+    //}
 
-    float temp = (msb << 8) + lsb ;
+   // float temp = (msb << 8) + lsb ;
+    float temp = msb ;
 
 return temp ;
     
