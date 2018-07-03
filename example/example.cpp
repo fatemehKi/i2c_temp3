@@ -10,7 +10,7 @@
 #include <string.h>
 #include <termios.h>
 #include <time.h>
-#include <AdafruitMCP9808.h>
+#include <adafruitMCP9808.h>
 
 int getkey() {
     int character;
