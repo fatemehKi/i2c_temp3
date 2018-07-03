@@ -100,3 +100,17 @@ int AdafruitMCP9808::getError()
 {
     return error ;
 }
+
+uint16_t AdafruitMCP9808::read16(uint8_t reg) {
+  uint16_t val;
+
+  Wire.beginTransmission(_i2caddr);
+  Wire.write((uint8_t)reg);
+  Wire.endTransmission();
+  
+  Wire.requestFrom((uint8_t)_i2caddr, (uint8_t)2);
+  val = Wire.read();
+  val <<= 8;
+  val |= Wire.read();  
+  return val;  
+}
