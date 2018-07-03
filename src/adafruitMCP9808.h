@@ -78,6 +78,10 @@ public:
 
     int getError() ;
   uint16_t read16(uint8_t reg);
+  
+  private:
+
+uint8_t _i2caddr;
 
 };
 
