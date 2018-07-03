@@ -1,4 +1,4 @@
-#include "AdafruitMCP9808.h"
+#include "adafruitMCP9808.h"
 // Interface for Lidar-Lite V2 (Blue Label) with NVIDIA Jetson TK1
 
 
