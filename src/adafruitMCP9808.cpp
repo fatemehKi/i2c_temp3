@@ -106,8 +106,9 @@ float AdafruitMCP9808::getTemp()
     if (ioResult < 0) {
         return ioResult ;
     } else {
-        msb = ioResult ;
-           printf("MSB: %f\n",msb) ;
+        msb = ioResult & 0x0FFF;
+        msb /=  16.0;
+        printf("MSB: %f\n",msb) ;
     }
    // ioResult = readAdafruitMCP9808(kAdafruitMCP9808TempLSB);
    // if (ioResult < 0) {
