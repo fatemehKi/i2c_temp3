@@ -56,7 +56,11 @@ int main() {
                 int llError ;
                 llError = adafruitMCP9808->getError() ;
                 printf("Adafruit MCP9808 error: %d\n",llError) ;
-        }
+            }
+            else {
+                
+                printf("Temperature: %5d \n",Temperature);
+            }
     }
     adafruitMCP9808->closeAdafruitMCP9808();
 }
