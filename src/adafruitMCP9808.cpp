@@ -83,30 +83,16 @@ int AdafruitMCP9808::writeAdafruitMCP9808(int writeRegister, int writeValue)
 }*/
 
 // Return the current calculated distance in centimeters
-int AdafruitMCP9808::getTemp()
+float AdafruitMCP9808::getTemp()
 {
-    int ioResult ;
-    int msb, lsb ;
-   /*ioResult = writeAdafruitMCP9808(kAdafruitMCP9808CommandControlRegister,kAdafruitMCP9808Measure);
-    if (ioResult < 0) {
-        return ioResult ;
-    }*/
-    ioResult = readAdafruitMCP9808(kAdafruitMCP9808TempMSB);
-    if (ioResult < 0) {
-        return ioResult ;
-    } else {
-        msb = ioResult ;
-    }
-    ioResult = readAdafruitMCP9808(kAdafruitMCP9808TempLSB);
-    if (ioResult < 0) {
-        return ioResult ;
-    } else {
-        lsb = ioResult ;
-    }
+  int t = read16(MCP9808_REG_AMBIENT_TEMP);
 
-    int Temperature = (msb << 8) + lsb ;
+  float temp = t & 0x0FFF;
+  temp /=  16.0;
+  if (t & 0x1000) temp -= 256;
 
-    return Temperature ;
+
+    return temp;
 }
 
 // Return the last i/o error
