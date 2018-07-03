@@ -77,6 +77,7 @@ public:
     //int getTemp() ;
 
     int getError() ;
+  uint16_t read16(uint8_t reg);
 
 };
 
