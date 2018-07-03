@@ -119,9 +119,6 @@ float AdafruitMCP9808::getTemp()
 
 return temp ;
     
-    
-    
-    
 }
 
 // Return the last i/o error
@@ -130,7 +127,7 @@ int AdafruitMCP9808::getError()
     return error ;
 }
 
-uint16_t AdafruitMCP9808::read16(uint8_t reg) {
+/*uint16_t AdafruitMCP9808::read16(uint8_t reg) {
   uint16_t val;
 
   Wire.beginTransmission(_i2caddr);
@@ -143,3 +140,4 @@ uint16_t AdafruitMCP9808::read16(uint8_t reg) {
   val |= Wire.read();  
   return val;  
 }
+*/
