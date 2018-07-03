@@ -85,7 +85,7 @@ int AdafruitMCP9808::writeAdafruitMCP9808(int writeRegister, int writeValue)
 // Return the current calculated distance in centimeters
 float AdafruitMCP9808::getTemp()
 {
-  int t = read16(MCP9808_REG_AMBIENT_TEMP);
+  uint16_t t = read16(MCP9808_REG_AMBIENT_TEMP);
 
   float temp = t & 0x0FFF;
   temp /=  16.0;
