@@ -73,7 +73,8 @@ public:
     void closeAdafruitMCP9808();                   // Close the I2C bus to the AdafruitMCP9808
    // int writeAdafruitMCP9808(int writeRegister,int writeValue) ;
     int readAdafruitMCP9808(int readRegister) ;
-    int getTemp() ;
+    float getTemp();
+    //int getTemp() ;
 
     int getError() ;
 
