@@ -38,6 +38,7 @@ int getkey() {
 int main() {
     AdafruitMCP9808 *adafruitMCP9808 = new AdafruitMCP9808() ;
     int err = adafruitMCP9808->openAdafruitMCP9808();
+    printf("Example running");
     if (err < 0){
         printf("Error: %d", adafruitMCP9808->error);
     }
