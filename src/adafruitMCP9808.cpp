@@ -104,9 +104,9 @@ int AdafruitMCP9808::getTemp()
         lsb = ioResult ;
     }
 
-    int distance = (msb << 8) + lsb ;
+    int Temperature = (msb << 8) + lsb ;
 
-    return distance ;
+    return Temperature ;
 }
 
 // Return the last i/o error
