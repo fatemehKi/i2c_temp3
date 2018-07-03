@@ -34,6 +34,13 @@
 #include <unistd.h>
 #include <errno.h>
 
+#if ARDUINO >= 100
+ #include "Arduino.h"
+#else
+ #include "WProgram.h"
+#endif
+
+#include <Wire.h>
 
 // Information taken from PulsedLight knowledge base 5-4-15
 // Internal Control Registers
