@@ -97,7 +97,7 @@ float AdafruitMCP9808::getTemp()
     
         
     int ioResult ;
-    int msb, lsb ;
+    float msb, lsb ;
     ioResult = writeAdafruitMCP9808(kAdafruitMCP9808CommandControlRegister,kAdafruitMCP9808Measure);
     if (ioResult < 0) {
         return ioResult ;
