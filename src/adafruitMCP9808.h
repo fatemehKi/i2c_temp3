@@ -36,7 +36,7 @@
 
 
 
-#include <Wire.h>
+//#include <Wire.h>
 
 // Information taken from PulsedLight knowledge base 5-4-15
 // Internal Control Registers
@@ -80,11 +80,11 @@ public:
     //int getTemp() ;
 
     int getError() ;
-  uint16_t read16(uint8_t reg);
+  //uint16_t read16(uint8_t reg);
   
-  private:
+  //private:
 
-uint8_t _i2caddr;
+//uint8_t _i2caddr;
 
 };
 
