@@ -108,7 +108,7 @@ float AdafruitMCP9808::getTemp()
     } else {
         msb = ioResult ;
     }
-    ioResult = readLidarLite(kAdafruitMCP9808TempLSB);
+    ioResult = readAdafruitMCP9808(kAdafruitMCP9808TempLSB);
     if (ioResult < 0) {
         return ioResult ;
     } else {
