@@ -49,9 +49,9 @@ int main() {
 
         // 27 is the ESC key
 
-        while(adafruitMCP9808->error >= 0 ){
-            int distance = adafruitMCP9808->getTemp();
-            if (distance < 0) {
+        while(adafruitMCP9808->error >= 0 && getkey() != 27 ){
+            int Temperature = adafruitMCP9808->getTemp();
+            if (Temperature < 0) {
                 int llError ;
                 llError = adafruitMCP9808->getError() ;
                 printf("Adafruit MCP9808 error: %d\n",llError) ;
