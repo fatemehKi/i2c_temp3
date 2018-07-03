@@ -1,2 +1,2 @@
 all:
-	g++ example.cpp ../src/lidarlite.cpp -I../src -o example
+	g++ example.cpp ../src/adafruitMCP9808.cpp -I../src -o example
