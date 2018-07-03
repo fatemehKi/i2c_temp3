@@ -62,7 +62,7 @@
 //#define kAdafruitMCP9808SoftwareVersion               0x4f    // Software Version: Revisions begin with 0x01
 
 // Register Command
-#define kAdafruitMCP9808Measure                       0x04    // Take acquisition & correlation processing with DC correction
+#define kAdafruitMCP9808Measure                       0x00    // Take acquisition & correlation processing with DC correction
 
 class AdafruitMCP9808
 {
