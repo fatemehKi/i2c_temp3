@@ -48,7 +48,7 @@ void AdafruitMCP9808::closeAdafruitMCP9808()
     }
 }
 
-// Read the given register on the Lidar-Lite
+// Read the given register on the Adafruit MCP9808
 int AdafruitMCP9808::readAdafruitMCP9808(int readRegister)
 {
     // Do not use i2c_smbus_read_byte_data here ; AdafruitMCP9808 V2 needs STOP between write and read
@@ -68,7 +68,7 @@ int AdafruitMCP9808::readAdafruitMCP9808(int readRegister)
 
 
 
-// Write the the given value to the given register on the Lidar-Lite
+// Write the the given value to the given register on the Adafruit
 int AdafruitMCP9808::writeAdafruitMCP9808(int writeRegister, int writeValue)
 {
     int toReturn = i2c_smbus_write_byte_data(kI2CFileDescriptor, writeRegister, writeValue);
